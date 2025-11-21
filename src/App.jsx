@@ -1,27 +1,24 @@
 import React from 'react'
-import Navbar from './Components/navbar'
-import Hero from './Components/Hero'
-import HomeCards from './Components/HomeCards'
-import JobListings from './Components/JobListings'
+import {Route, createBrowserRouter, createRoutesFromElements, RouterProvider} from 'react-router-dom'
+import MainLayout from './layouts/MainLayout'
+import HomePage from './pages/HomePage'
+import JobsPage from './pages/JobsPage'
+import NotFoundPage from './pages/NotFoundPage'
+
+
+const router = createBrowserRouter(
+  createRoutesFromElements(
+  <Route path='/' element={<MainLayout />}>
+    <Route index element={<HomePage />}/>
+    <Route path = '/jobs' element={<JobsPage/>}></Route>
+    <Route path = '*' element={<NotFoundPage />}></Route>
+  </Route>
+
+)
+)
 
 const App = () => {
-  return (
-    <>
-    <Navbar/>
-    <Hero title ="OrbitalDance" subtitle="The new way to discover dance."/>
-    <HomeCards/>
-    <JobListings/>
-   
-
-    <section className="m-auto max-w-lg my-10 px-6">
-      <a
-        href="jobs.html"
-        className="block bg-black text-white text-center py-4 px-6 rounded-xl hover:bg-gray-700"
-        >View All Jobs</a
-      >
-    </section>
-    </>
-  )
+  return <RouterProvider router = {router}/>
 }
 
 export default App
