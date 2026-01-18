@@ -4,12 +4,12 @@ import HomeCards from '../Components/HomeCards'
 import JobListings from '../Components/JobListings'
 import ViewAllJobs from '../Components/ViewAllJobs'
 
-const HomePage = () => {
+const HomePage = ({isHome = true}) => {
   return (
     <>
         <Hero/>
         <HomeCards />
-        <JobListings />
+        <JobListings isHome = {true} />
         <ViewAllJobs />
     </>
   )
