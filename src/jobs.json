@@ -83,6 +83,20 @@
         "contactEmail": "contact@ipsumlorem.com",
         "contactPhone": "555-555-5555"
       }
+    },
+    {
+      "id": "ec9c",
+      "title": "New job",
+      "type": "Full-time",
+      "location": "newc",
+      "description": "this is a job ",
+      "salary": "Under $50k",
+      "company": {
+        "name": "newcomp",
+        "description": "this is a company",
+        "contactEmail": "company@test.com",
+        "contactPhone": "00000000000"
+      }
     }
   ]
 }
