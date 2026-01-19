@@ -17,10 +17,10 @@ const Navbar = () => {
               <img
                 className="h-10 w-auto"
                 src= {logo}
-                alt="Orbital Dance"
+                alt="React Jobs"
               />
               <span className="hidden md:block text-white text-2xl font-bold ml-2"
-                >Orbital Dance</span
+                >React Jobs</span
               >
             </NavLink>
             <div className="md:ml-auto">
@@ -33,12 +33,12 @@ const Navbar = () => {
                 <NavLink
                   to="/jobs"
                   className={ linkClass }
-                  >Events</NavLink
+                  >Jobs</NavLink
                 >
                 <NavLink
                   to="/add-job"
                   className={ linkClass }
-                  >Log in</NavLink
+                  >Add Job</NavLink
                 >
               </div>
             </div>
